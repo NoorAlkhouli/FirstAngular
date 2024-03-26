@@ -5,13 +5,14 @@ import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from "./header/header.component";
 import { PostComponent } from './post/post.component';
 import { UserComponent } from './user/user.component';
+import { ObservableComponent } from './observable/observable.component';
 
 @Component({
     selector: 'app-root',
     standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
-    imports: [RouterOutlet, FormsModule, CommonModule, ReactiveFormsModule, HeaderComponent,PostComponent,UserComponent]
+    imports: [RouterOutlet, FormsModule, CommonModule, ReactiveFormsModule, HeaderComponent,PostComponent,UserComponent,ObservableComponent]
 })
 export class AppComponent {
   title = 'FirstProject';
