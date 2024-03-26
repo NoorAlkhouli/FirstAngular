@@ -1,1 +1,35 @@
-<p>user works!</p>
+<div class="container">
+  {{ firstName | lowercase }}
+  <br />
+  {{ firstName | uppercase }}
+  <br />
+  {{ birthday | date }}
+  <br />
+  {{ birthday | date : "fullDate" | uppercase }}
+  <br />
+  {{ birthday | date : "fullDate" | lowercase }}
+  <br />
+  {{ birthday | date : "mediumDate" | lowercase }}
+  <br />
+  {{ birthday | date : "shortDate" | lowercase }}
+
+  <p>
+    The hero's birthday is {{ birthday | date : "shortDate" }} in the
+    "shortDate" format.
+  </p>
+
+  <p>
+    The hero's birthday is {{ birthday | date : format }} in "{{ format }}"
+    format. Click the toggle button to change formats.
+  </p>
+
+  <button type="button" (click)="toggleFormat()">Toggle Format</button>
+
+  <br />
+  {{ paragraph | titlecase }}
+
+  <br />
+  {{ paragraph | slice : 2 }}
+</div>
+
+<br />
