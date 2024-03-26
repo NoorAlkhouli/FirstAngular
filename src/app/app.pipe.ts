@@ -5,7 +5,8 @@ import { Pipe ,PipeTransform} from "@angular/core";
     standalone:true
 })
 export class PipeFirst implements PipeTransform{
-transform(value: any ) {
-    
+transform(value: any ) {}
 }
-}
+
+
+
