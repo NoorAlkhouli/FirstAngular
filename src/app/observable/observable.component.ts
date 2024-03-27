@@ -37,6 +37,7 @@ export class ObservableComponent implements OnInit, OnDestroy {
     this.fetchData().subscribe({
       next: (response) => {
         console.log('response', response);
+        this.data=response;
       },
       error: (error) => {
         console.error('error', error);
