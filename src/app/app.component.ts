@@ -6,13 +6,15 @@ import { HeaderComponent } from "./header/header.component";
 import { PostComponent } from './post/post.component';
 import { UserComponent } from './user/user.component';
 import { ObservableComponent } from './observable/observable.component';
+import { TestComponent } from './test/test.component';
+import { MultislotComponent } from "./multislot/multislot.component";
 
 @Component({
     selector: 'app-root',
     standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
-    imports: [RouterOutlet, FormsModule, CommonModule, ReactiveFormsModule, HeaderComponent,PostComponent,UserComponent,ObservableComponent]
+    imports: [RouterOutlet, FormsModule, CommonModule, ReactiveFormsModule, HeaderComponent, PostComponent, UserComponent, ObservableComponent, TestComponent, MultislotComponent]
 })
 export class AppComponent {
   title = 'FirstProject';

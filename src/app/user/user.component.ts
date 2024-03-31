@@ -20,4 +20,6 @@ export class UserComponent {
   toggleFormat(){
     alert(this.format)
   }
+
+  date= new Date();
 }
