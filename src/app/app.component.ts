@@ -8,13 +8,14 @@ import { UserComponent } from './user/user.component';
 import { ObservableComponent } from './observable/observable.component';
 import { TestComponent } from './test/test.component';
 import { MultislotComponent } from "./multislot/multislot.component";
+import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
 
 @Component({
     selector: 'app-root',
     standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
-    imports: [RouterOutlet, FormsModule, CommonModule, ReactiveFormsModule, HeaderComponent, PostComponent, UserComponent, ObservableComponent, TestComponent, MultislotComponent]
+    imports: [RouterOutlet, FormsModule, CommonModule, ReactiveFormsModule, HeaderComponent, PostComponent, UserComponent, ObservableComponent, TestComponent, MultislotComponent, PageNotFoundComponent]
 })
 export class AppComponent {
   title = 'FirstProject';

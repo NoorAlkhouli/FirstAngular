@@ -1,0 +1,12 @@
+@mixin activeLink(){
+    border-radius:2px;
+    box-shadow;inset 0 1px 0 0 #c2c2c2;
+    background:#bddbfa linear-gradient(to bottom,#686969 5% ,#2f5378 100%);
+    color:#ffffff;
+    text-shadow:0 1px 0 #000000;
+    box-sizing : border-box;
+}
+
+.active{
+    @include activeLink();
+}

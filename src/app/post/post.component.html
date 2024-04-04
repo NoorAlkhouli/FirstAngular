@@ -1,46 +1,20 @@
 <body>
-  <div class="main">
-    <h1>Login Form</h1>
-
-    <div class="py-12">
-        {{email.value}}-{{password.value}}
-    </div>
-
-    <form action="" #loginForm="ngForm">
-      <label for="first"> Username: </label>
-      <input
-        type="text"
-        id="first"
-        name="first"
-        placeholder="Enter your Username"
-        required
-        ngModel
-        name="email"
-        #email="ngModel"
-      />
-
-      <label for="password"> Password: </label>
-      <input
-        type="password"
-        id="password"
-        name="password"
-        placeholder="Enter your Password"
-        required
-        ngModel
-        name="password"
-         #password="ngModel"
-      />
-
-      <div class="wrap">
-        <button
-          type="submit"
-          id="submit"
-          class="btn btn-primary"
-          (click)="login(loginForm)"
-        >
-          Log In
-        </button>
-      </div>
-    </form>
+  <form  action="" #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+  <div class="form-group">
+     {{ email.errors | json }}
+    <label for="exampleInputEmail1">Email address</label>
+    <input matinput type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"  [(ngModel)]="loginDto.email" name="email" required
+        #email="ngModel">
+              @if(email.errors?.['required']){ email is requerd }
+           
   </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"   required
+        ngModel
+        name="password"
+        #password="ngModel">
+  </div>
+  <button type="submit" class="btn btn-primary">Log In</button>
+</form>
 </body>
